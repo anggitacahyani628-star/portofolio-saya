@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio - Ni Putu Anggita Cahyani</title>
+  <style>
+    :root {
+      --bg-dark: #101126;
+      --bg-light: #f7f6fb;
+      --bg-white: #ffffff;
+      --primary: #7257f5;
+      --text-light: #ffffff;
+      --text-dark: #17182d;
+      --text-gray: #66677b;
+      --text-muted: #bfc0d2;
+      --container-width: 1440px;
+      --padding-x: 96px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 var(--padding-x);
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 1024px) {
+      :root {
+        --padding-x: 48px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --padding-x: 24px;
+      }
+    }
+
+    /* SECTION HERO */
+    .section-hero {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 64px;
+    }
+    .hero-bg-glow {
+      position: absolute;
+      top: -170px;
+      right: -100px;
+      width: 620px;
+      height: 620px;
+      background-color: rgba(114, 87, 245, 0.13);
+      border-radius: 310px;
+      filter: blur(100px);
+      pointer-events: none;
+    }
+    .site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 88px;
+      position: relative;
+      z-index: 10;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-mark {
+      background-color: var(--primary);
+      color: #fff;
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .brand-name {
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+    }
+    .nav-links a {
+      color: #cacadd;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+    .nav-links a:hover {
+      color: #fff;
+    }
+    .nav-links .btn-contact {
+      background-color: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 0 18px;
+      height: 42px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+    .nav-links .btn-contact:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 80px;
+      padding-top: 52px;
+      position: relative;
+      z-index: 10;
+    }
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      max-width: 620px;
+    }
+    .availability-badge {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 9px 14px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 12px;
+      color: #d8d7e8;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      align-self: flex-start;
+    }
+    .headline-group {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .greeting {
+      color: #c8beff;
+      font-size: 24px;
+    }
+    .name {
+      font-size: 56px;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.1;
+    }
+    .tagline {
+      color: var(--text-muted);
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    .btn-primary {
+      background-color: var(--primary);
+      color: #fff;
+      height: 54px;
+      padding: 0 22px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      box-shadow: 0px 12px 32px 0px rgba(114, 87, 245, 0.25);
+      transition: transform 0.2s ease;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background-color: #fff;
+      color: var(--text-dark);
+      height: 54px;
+      padding: 0 22px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+    }
+    .focus-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      background-color: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .hero-artwork {
+      position: relative;
+      width: 548px;
+      height: 548px;
+      flex-shrink: 0;
+    }
+    .artwork-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .orbit {
+      position: absolute;
+      top: 34px;
+      left: 34px;
+    }
+    .accent-glow {
+      position: absolute;
+      top: 96px;
+      left: 74px;
+    }
+    .code-window {
+      position: absolute;
+      top: 78px;
+      left: 48px;
+      width: 450px;
+      background: #fff;
+      border-radius: 32px;
+      box-shadow: 0px 18px 48px 0px rgba(20, 20, 43, 0.08);
+      overflow: hidden;
+      color: var(--text-dark);
+    }
+    .window-bar {
+      background-color: #f0eff7;
+      height: 54px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .file-tab {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 12px;
+      color: var(--text-gray);
+      font-weight: 500;
+    }
+    .code-body {
+      display: flex;
+      padding: 26px 24px;
+      gap: 18px;
+      height: 298px;
+    }
+    .line-numbers {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      color: #b7b6c6;
+      font-family: monospace;
+      font-size: 14px;
+    }
+    .code-sample {
+      margin: 0;
+      font-family: monospace;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text-dark);
+      white-space: pre-wrap;
+    }
+    .floating-card {
+      position: absolute;
+      box-shadow: 0px 12px 32px 0px rgba(114, 87, 245, 0.25);
+    }
+    .role-card {
+      top: 398px;
+      left: 0;
+      background-color: var(--primary);
+      border-radius: 24px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .role-icon {
+      background-color: rgba(255, 255, 255, 0.13);
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .role-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .role-label {
+      color: #c8beff;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .role-value {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .availability-card {
+      top: 432px;
+      left: 284px;
+      background-color: #1a1b38;
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      border-radius: 24px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-content {
+        flex-direction: column;
+        gap: 60px;
+      }
+      .hero-artwork {
+        margin: 0 auto;
+      }
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .name {
+        font-size: 40px;
+      }
+      .hero-artwork {
+        transform: scale(0.7);
+        transform-origin: top center;
+        margin-bottom: -150px;
+      }
+    }
+
+    /* MARQUEE */
+    .section-marquee {
+      background-color: var(--primary);
+      color: #fff;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-content {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 1px;
+      padding: 0 96px;
+      width: 100%;
+      justify-content: space-between;
+    }
+    @media (max-width: 768px) {
+      .marquee-content {
+        padding: 0 24px;
+        font-size: 12px;
+      }
+    }
+
+    /* CAPABILITIES */
+    .section-capabilities {
+      background-color: var(--bg-light);
+      padding: 76px 0;
+    }
+    .section-intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 36px;
+    }
+    .section-intro .heading {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .eyebrow {
+      color: #5840d8;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .section-intro .title {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text-dark);
+    }
+    .support-copy {
+      color: var(--text-gray);
+      max-width: 370px;
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .capability-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .capability-card {
+      background-color: #fff;
+      border: 1px solid #ddddea;
+      border-radius: 24px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .icon-badge {
+      background-color: #eae6ff;
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-header .index {
+      color: #aaaabd;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .card-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text-dark);
+    }
+    .card-desc {
+      color: var(--text-gray);
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .capability-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .section-intro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+    }
+    @media (max-width: 768px) {
+      .capability-grid {
+        grid-template-columns: 1fr;
+      }
+      .section-intro .title {
+        font-size: 24px;
+      }
+    }
+
+    /* ABOUT SECTION */
+    .section-about {
+      background-color: #fff;
+      padding: 96px 0 0 0;
+    }
+    .section-heading {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+    .eyebrow-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .index-badge {
+      background-color: #eae6ff;
+      color: #5840d8;
+      height: 24px;
+      padding: 0 12px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .heading-copy {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .heading-copy .title {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--text-dark);
+      max-width: 700px;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .heading-copy .desc {
+      color: var(--text-gray);
+      max-width: 410px;
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .about-content {
+      display: flex;
+      gap: 28px;
+    }
+    .profile-story {
+      background-color: var(--bg-dark);
+      color: #fff;
+      border-radius: 32px;
+      padding: 36px;
+      width: 540px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0px 18px 48px 0px rgba(20, 20, 43, 0.08);
+    }
+    .story-accent {
+      position: absolute;
+      top: -70px;
+      right: -70px;
+      width: 210px;
+      height: 210px;
+      background-color: rgba(114, 87, 245, 0.21);
+      border-radius: 50%;
+      filter: blur(40px);
+    }
+    .story-marker {
+      background-color: var(--primary);
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    .story-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .story-copy .intro {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 0;
+      line-height: 1.5;
+    }
+    .story-copy .paragraph {
+      color: #c3c3d4;
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .story-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .personal-details {
+      background-color: var(--bg-light);
+      border-radius: 32px;
+      padding: 25px 32px 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .details-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 6px;
+    }
+    .details-title h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0;
+    }
+    .code-label {
+      color: #5840d8;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    .data-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 0;
+      border-top: 1px solid #ddddea;
+    }
+    .data-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .data-copy .label {
+      color: var(--text-gray);
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .data-copy .value {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    @media (max-width: 1024px) {
+      .heading-copy {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+      .about-content {
+        flex-direction: column;
+      }
+      .profile-story {
+        width: 100%;
+      }
+    }
+
+    /* EDUCATION SECTION */
+    .section-education {
+      background-color: #fff;
+      padding: 56px 0 96px 0;
+    }
+    .education-history {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+    .education-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .education-title h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin: 0;
+      color: var(--text-dark);
+      white-space: nowrap;
+    }
+    .connector {
+      flex: 1;
+      height: 1px;
+      background-color: #ddddea;
+    }
+    .education-title .subtitle {
+      color: var(--text-gray);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .education-steps {
+      display: flex;
+      gap: 16px;
+    }
+    .education-step {
+      background-color: var(--bg-light);
+      border: 1px solid #ddddea;
+      border-radius: 24px;
+      padding: 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 156px;
+    }
+    .step-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .level-badge {
+      background-color: #eae6ff;
+      color: #5840d8;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .school {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    @media (max-width: 768px) {
+      .education-steps {
+        flex-direction: column;
+      }
+      .education-step {
+        height: auto;
+        gap: 24px;
+      }
+    }
+
+    /* PROJECTS SECTION */
+    .section-projects {
+      background-color: var(--bg-dark);
+      color: #fff;
+      padding: 96px 0 56px 0;
+    }
+    .section-projects .eyebrow {
+      color: #c8beff;
+    }
+    .section-projects .index-badge {
+      background-color: #7257f5;
+      color: #fff;
+    }
+    .section-projects .title {
+      color: #fff;
+    }
+    .section-projects .desc {
+      color: #bdbdd2;
+    }
+    .featured-project {
+      background-color: #1a1b38;
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 32px;
+      padding: 36px;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+    .project-preview {
+      width: 600px;
+      background-color: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0px 18px 48px 0px rgba(20, 20, 43, 0.08);
+      flex-shrink: 0;
+    }
+    .browser-bar {
+      background-color: #f1f0f7;
+      height: 44px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
+    }
+    .address-bar {
+      background-color: #fff;
+      height: 24px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+      font-size: 12px;
+      color: var(--text-gray);
+    }
+    .website-canvas {
+      background-color: #f8f7fc;
+      height: 346px;
+      display: flex;
+      flex-direction: column;
+    }
+    .website-header {
+      background-color: #fff;
+      height: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 24px;
+    }
+    .website-brand {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .website-mark {
+      width: 18px;
+      height: 18px;
+      background-color: var(--primary);
+      border-radius: 5px;
+    }
+    .website-name {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .website-nav {
+      display: flex;
+      gap: 14px;
+      font-size: 8px;
+      color: var(--text-gray);
+    }
+    .website-hero {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 26px 34px;
+      height: 190px;
+    }
+    .website-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 343px;
+    }
+    .website-eyebrow {
+      background-color: #eae6ff;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 8px;
+      color: #5840d8;
+      font-weight: 700;
+      align-self: flex-start;
+    }
+    .website-headline {
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 0;
+    }
+    .website-desc {
+      font-size: 12px;
+      color: var(--text-gray);
+      margin: 0;
+    }
+    .website-btn {
+      width: 72px;
+      height: 22px;
+      background-color: var(--primary);
+      border-radius: 999px;
+    }
+    .website-illustration {
+      background-color: var(--bg-dark);
+      width: 165px;
+      height: 130px;
+      border-radius: 24px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .ill-glow {
+      position: absolute;
+      top: -20px;
+      left: 77px;
+    }
+    .ill-code {
+      background-color: rgba(255, 255, 255, 0.06);
+      padding: 13px;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      width: 128px;
+      position: relative;
+      z-index: 1;
+    }
+    .code-line {
+      height: 5px;
+      border-radius: 999px;
+    }
+    .c1 {
+      width: 68px;
+      background-color: #c8beff;
+    }
+    .c2 {
+      width: 92px;
+      background-color: rgba(255, 255, 255, 0.31);
+    }
+    .c3 {
+      width: 55px;
+      background-color: #8be3c1;
+    }
+    .c4 {
+      width: 78px;
+      background-color: rgba(255, 255, 255, 0.31);
+    }
+    .website-stats {
+      background-color: #fff;
+      height: 108px;
+      display: flex;
+      gap: 12px;
+      padding: 18px 34px;
+    }
+    .feature-card {
+      background-color: #f7f5ff;
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      flex: 1;
+    }
+    .f-icon {
+      width: 18px;
+      height: 18px;
+      background-color: #eae6ff;
+      border-radius: 5px;
+    }
+    .f-label {
+      font-size: 8px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .project-details {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .project-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .project-index {
+      color: #c8beff;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .project-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .project-title {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0;
+    }
+    .project-desc {
+      color: #c3c3d4;
+      font-size: 15px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .project-tags {
+      display: flex;
+      gap: 8px;
+    }
+
+    @media (max-width: 1024px) {
+      .featured-project {
+        flex-direction: column;
+      }
+      .project-preview {
+        width: 100%;
+      }
+    }
+
+    /* WORKING PROCESS */
+    .section-process {
+      background-color: var(--bg-dark);
+      padding-bottom: 42px;
+    }
+    .working-process {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .process-heading {
+      color: #c8beff;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .process-steps {
+      display: flex;
+      gap: 14px;
+    }
+    .process-card {
+      background-color: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 24px;
+      padding: 20px;
+      display: flex;
+      gap: 16px;
+      flex: 1;
+    }
+    .process-card .icon-badge {
+      background-color: rgba(255, 255, 255, 0.08);
+      flex-shrink: 0;
+    }
+    .process-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .step-num {
+      color: #c8beff;
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .step-title {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      margin: 0;
+    }
+    .step-desc {
+      color: #b9b9cd;
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .process-steps {
+        flex-direction: column;
+      }
+    }
+
+    /* CALLOUT / CONTACT */
+    .section-callout {
+      background-color: var(--bg-light);
+      padding: 88px 0 48px 0;
+    }
+    .collaboration-callout {
+      background-color: var(--primary);
+      border-radius: 32px;
+      padding: 48px 56px;
+      display: flex;
+      align-items: center;
+      gap: 64px;
+      box-shadow: 0px 12px 32px 0px rgba(114, 87, 245, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .callout-glow {
+      position: absolute;
+      top: -210px;
+      right: -100px;
+      width: 570px;
+      height: 570px;
+      background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.15) 0%,
+        rgba(255, 255, 255, 0) 70%
+      );
+      pointer-events: none;
+    }
+    .callout-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+      z-index: 1;
+      flex: 1;
+    }
+    .contact-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .callout-copy .title {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.2;
+    }
+    .callout-copy .desc {
+      color: #ebe8ff;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .contact-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-white {
+      background-color: #fff;
+      color: var(--text-dark);
+      height: 54px;
+      padding: 0 22px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      transition: transform 0.2s ease;
+    }
+    .btn-white:hover {
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 1px solid rgba(255, 255, 255, 0.29);
+      color: #fff;
+      height: 54px;
+      padding: 0 22px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+    }
+    .contact-artwork {
+      position: relative;
+      width: 310px;
+      height: 250px;
+      flex-shrink: 0;
+    }
+    .message-card {
+      position: absolute;
+      top: 28px;
+      left: 12px;
+      width: 260px;
+      background-color: var(--bg-dark);
+      border-radius: 32px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      box-shadow: 0px 18px 48px 0px rgba(20, 20, 43, 0.08);
+    }
+    .message-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .msg-icon {
+      background-color: rgba(255, 255, 255, 0.09);
+      width: 42px;
+      height: 42px;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .msg-code {
+      color: #9494ad;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .message-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .m-line {
+      height: 7px;
+      border-radius: 999px;
+    }
+    .l1 {
+      width: 155px;
+      background-color: #c8beff;
+    }
+    .l2 {
+      width: 212px;
+      background-color: rgba(255, 255, 255, 0.16);
+    }
+    .l3 {
+      width: 190px;
+      background-color: rgba(255, 255, 255, 0.16);
+    }
+    .message-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .floating-arrow {
+      position: absolute;
+      top: 0;
+      left: 238px;
+      width: 60px;
+      height: 60px;
+      background-color: #fff;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (max-width: 1024px) {
+      .collaboration-callout {
+        flex-direction: column;
+        padding: 40px;
+      }
+    }
+
+    /* FOOTER */
+    .section-footer {
+      background-color: var(--bg-light);
+      padding-bottom: 42px;
+    }
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-brand .brand-mark {
+      background-color: var(--bg-dark);
+      width: 40px;
+      height: 40px;
+    }
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .brand-copy .name {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+    .brand-copy .role {
+      font-size: 12px;
+      color: var(--text-gray);
+    }
+    .footer-links {
+      display: flex;
+      gap: 28px;
+    }
+    .footer-links a {
+      color: var(--text-gray);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    .back-to-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #5840d8;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .footer-divider {
+      height: 1px;
+      background-color: #ddddea;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-gray);
+      font-size: 12px;
+    }
+    .footer-bottom .location {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section id="hero" class="section-hero">
+  <div class="hero-bg-glow"></div>
+  <div class="container">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">AC</div>
+        <div class="brand-name">Anggita Cahyani</div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">Tentang</a>
+        <a href="#capabilities">Keahlian</a>
+        <a href="#projects">Portofolio</a>
+        <a href="#contact" class="btn-contact">Hubungi Saya</a>
+      </nav>
+    </header>
+
+    <div class="hero-content">
+      <div class="hero-copy">
+        <div class="availability-badge">
+          <span>SISWI RPL • DENPASAR, BALI</span>
+        </div>
+        <div class="headline-group">
+          <span class="greeting">Halo, Saya</span>
+          <h1 class="name">Ni Putu Anggita Cahyani</h1>
+        </div>
+        <p class="tagline">
+          Siswi Rekayasa Perangkat Lunak yang bersemangat merancang pengalaman
+          digital fungsional, estetik, dan mudah digunakan.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">Lihat Portofolio</a>
+          <a href="#about" class="btn-secondary">Tentang Saya</a>
+        </div>
+        <div class="focus-tags">
+          <span class="tag">WEB DEVELOPMENT</span>
+          <span class="tag">FRONT-END</span>
+          <span class="tag">UI/UX</span>
+        </div>
+      </div>
+
+      <div class="hero-artwork">
+        <div class="code-window">
+          <div class="window-bar">
+            <div class="file-tab">
+              <span>portfolio.tsx</span>
+            </div>
+          </div>
+          <div class="code-body">
+            <div class="line-numbers">
+              <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span><span>07</span>
+            </div>
+            <pre class="code-sample"><code>developer = {
+  name: "Anggita Cahyani",
+  focus: ["Front-End",
+          "UI/UX Design"],
+  status: "terus belajar"
+};
+
+// build with purpose ✦</code></pre>
+          </div>
+        </div>
+
+        <div class="role-card floating-card">
+          <div class="role-copy">
+            <span class="role-label">Fokus utama</span>
+            <span class="role-value">Front-End Developer</span>
+          </div>
+        </div>
+
+        <div class="availability-card floating-card">
+          <span>Terbuka untuk belajar & kolaborasi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-marquee">
+  <div class="marquee-content">
+    <span>DESIGN WITH EMPATHY</span>
+    <span>✦</span>
+    <span>CODE WITH PURPOSE</span>
+    <span>✦</span>
+    <span>LEARN EVERY DAY</span>
+    <span>✦</span>
+    <span>BUILD FOR PEOPLE</span>
+  </div>
+</section>
+
+<section id="capabilities" class="section-capabilities">
+  <div class="container">
+    <div class="section-intro">
+      <div class="heading">
+        <span class="eyebrow">Bidang yang saya minati</span>
+        <h2 class="title">Mendesain. Mengembangkan. Bertumbuh.</h2>
+      </div>
+      <p class="support-copy">
+        Berfokus pada perpaduan logika pemrograman dan pengalaman visual yang bermakna.
+      </p>
+    </div>
+    <div class="capability-grid">
+      <div class="capability-card">
+        <div class="card-header">
+          <span class="index">01</span>
+        </div>
+        <div class="card-copy">
+          <h3 class="card-title">Front-End</h3>
+          <p class="card-desc">
+            Menyusun antarmuka web yang responsif, terstruktur, dan nyaman digunakan.
+          </p>
+        </div>
+      </div>
+      <div class="capability-card">
+        <div class="card-header">
+          <span class="index">02</span>
+        </div>
+        <div class="card-copy">
+          <h3 class="card-title">UI/UX Design</h3>
+          <p class="card-desc">
+            Merancang alur dan visual yang jelas dengan perhatian pada kebutuhan pengguna.
+          </p>
+        </div>
+      </div>
+      <div class="capability-card">
+        <div class="card-header">
+          <span class="index">03</span>
+        </div>
+        <div class="card-copy">
+          <h3 class="card-title">Web Development</h3>
+          <p class="card-desc">
+            Mengembangkan ide menjadi pengalaman web yang fungsional dan terukur.
+          </p>
+        </div>
+      </div>
+      <div class="capability-card">
+        <div class="card-header">
+          <span class="index">04</span>
+        </div>
+        <div class="card-copy">
+          <h3 class="card-title">Visual Thinking</h3>
+          <p class="card-desc">
+            Menggabungkan logika, estetika, dan detail dalam setiap proses kreatif.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section-about">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow-row">
+        <div class="index-badge">01</div>
+        <span class="eyebrow">Tentang Saya</span>
+      </div>
+      <div class="heading-copy">
+        <h2 class="title">Rasa ingin tahu yang tumbuh menjadi karya digital.</h2>
+        <p class="desc">
+          Saya percaya teknologi yang baik bukan hanya bekerja dengan benar, tetapi juga terasa jelas dan menyenangkan saat digunakan.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="profile-story">
+        <div class="story-accent"></div>
+        <div class="story-marker">AC</div>
+        <div class="story-copy">
+          <p class="intro">
+            Halo! Saya Anggita, siswi RPL yang tertarik pada cara teknologi dan desain saling melengkapi.
+          </p>
+          <p class="paragraph">
+            Saya memiliki minat besar pada Software Engineering dan web development, khususnya Front-End serta UI/UX Design. Bagi saya, proses membangun sebuah antarmuka adalah kesempatan untuk mengubah ide menjadi pengalaman yang nyata dan mudah dipahami.
+          </p>
+          <p class="paragraph">
+            Saya termotivasi untuk terus belajar dan mengembangkan aplikasi web yang fungsional sekaligus estetik—dengan struktur yang rapi, visual yang relevan, dan pengalaman pengguna sebagai pusatnya.
+          </p>
+        </div>
+        <div class="story-tags">
+          <span class="tag">CURIOUS</span>
+          <span class="tag">DETAIL-ORIENTED</span>
+          <span class="tag">GROWTH MINDSET</span>
+        </div>
+      </div>
+
+      <div class="personal-details">
+        <div class="details-title">
+          <h3>Data Diri</h3>
+          <span class="code-label">PROFILE.JSON</span>
+        </div>
+        <div class="data-row">
+          <div class="data-copy">
+            <span class="label">Alamat</span>
+            <span class="value">Jl Gunung Agung Gg 2H No 13, Denpasar Bali</span>
+          </div>
+        </div>
+        <div class="data-row">
+          <div class="data-copy">
+            <span class="label">Agama</span>
+            <span class="value">Hindu</span>
+          </div>
+        </div>
+        <div class="data-row">
+          <div class="data-copy">
+            <span class="label">Jenis Kelamin</span>
+            <span class="value">Perempuan</span>
+          </div>
+        </div>
+        <div class="data-row">
+          <div class="data-copy">
+            <span class="label">Pendidikan Saat Ini</span>
+            <span class="value">Siswi RPL — SMKN 1 Denpasar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section-education">
+  <div class="container">
+    <div class="education-history">
+      <div class="education-title">
+        <h2>Riwayat Pendidikan</h2>
+        <div class="connector"></div>
+        <span class="subtitle">PERJALANAN BELAJAR</span>
+      </div>
+      <div class="education-steps">
+        <div class="education-step">
+          <div class="step-header">
+            <div class="level-badge">TK</div>
+          </div>
+          <div class="school">TK Kumara Jati</div>
+        </div>
+        <div class="education-step">
+          <div class="step-header">
+            <div class="level-badge">SD</div>
+          </div>
+          <div class="school">SDN 21 Pemecutan</div>
+        </div>
+        <div class="education-step">
+          <div class="step-header">
+            <div class="level-badge">SMP</div>
+          </div>
+          <div class="school">SMPN 4 Denpasar</div>
+        </div>
+        <div class="education-step">
+          <div class="step-header">
+            <div class="level-badge">SMK</div>
+          </div>
+          <div class="school">SMKN 1 Denpasar</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section-projects">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow-row">
+        <div class="index-badge">02</div>
+        <span class="eyebrow">Projects Description</span>
+      </div>
+      <div class="heading-copy">
+        <h2 class="title">Satu karya, banyak pembelajaran.</h2>
+        <p class="desc">
+          Setiap tahap menjadi ruang untuk melatih struktur berpikir, kepekaan visual, dan kemampuan menerjemahkan kebutuhan menjadi antarmuka.
+        </p>
+      </div>
+    </div>
+
+    <div class="featured-project">
+      <div class="project-details">
+        <div class="project-meta">
+          <span class="tag">FEATURED WORK</span>
+          <span class="project-index">01 / 01</span>
+        </div>
+        <div class="project-title-group">
+          <h3 class="project-title">Web Profil Mandiri</h3>
+          <p class="project-desc">
+            Sebuah karya web profil mandiri yang menyajikan identitas, minat, dan perjalanan belajar dalam tampilan yang terstruktur. Proyek ini menjadi ruang latihan untuk menggabungkan konten personal, hierarki visual, dan pengalaman pengguna yang mudah dipahami.
+          </p>
+        </div>
+        <div class="project-tags">
+          <span class="tag">PERSONAL PROFILE</span>
+          <span class="tag">FRONT-END</span>
+          <span class="tag">UI/UX</span>
+        </div>
+        <a href="#projects" class="btn-primary">Lihat Detail Karya</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section-callout">
+  <div class="container">
+    <div class="collaboration-callout">
+      <div class="callout-glow"></div>
+      <div class="callout-copy">
+        <div class="contact-eyebrow">
+          <span>Mari terhubung</span>
+        </div>
+        <h2 class="title">Punya ide menarik untuk dikembangkan bersama?</h2>
+        <p class="desc">
+          Saya terbuka untuk berdiskusi, belajar, dan berkolaborasi dalam karya digital. Hubungi saya melalui email atau media sosial untuk memulai percakapan.
+        </p>
+        <div class="contact-actions">
+          <a href="mailto:anggitacahyani628@gmail.com" class="btn-white">Hubungi via Email</a>
+          <a href="#contact" class="btn-outline">Temukan di Media Sosial</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="section-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-mark">AC</div>
+          <div class="brand-copy">
+            <span class="name">Ni Putu Anggita Cahyani</span>
+            <span class="role">Siswi Rekayasa Perangkat Lunak</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#about">Tentang</a>
+          <a href="#capabilities">Keahlian</a>
+          <a href="#projects">Portofolio</a>
+          <a href="#contact">Kontak</a>
+        </div>
+        <a href="#hero" class="back-to-top">
+          <span>KEMBALI KE ATAS</span>
+        </a>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span class="note">Portofolio pribadi • Dibuat dengan semangat belajar dan berkembang.</span>
+        <span class="location">DENPASAR, BALI</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
